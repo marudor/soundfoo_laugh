@@ -23,6 +23,9 @@ function createStream() {
       playSound();
     });
 
+    // eslint-disable-next-line no-console
+    console.log('Successfully created stream');
+
     stream.on('disconnect', message => {
       // eslint-disable-next-line no-console
       console.log(`Disconnected from twitter, ${message}`);

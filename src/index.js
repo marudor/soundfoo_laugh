@@ -15,4 +15,4 @@ router.get('/laugh', ctx => {
 server.use(router.routes());
 server.listen(process.env.PORT || 9999);
 
-playSound();
+// playSound();

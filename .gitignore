@@ -46,3 +46,4 @@ BundleReport.html
 bahntests/
 .env
 docker-compose.yml
+lib/

@@ -1,13 +1,14 @@
 // @flow
 import { promises as fs } from 'fs';
 import { spawnSync } from 'child_process';
+import path from 'path';
 
 async function getRandomSound() {
-  const files = await fs.readdir('./sounds');
+  const files = await fs.readdir(path.resolve('sounds'));
 
   const file = files[Math.floor(Math.random() * files.length)];
 
-  return `./sounds/${file}`;
+  return `${path.resolve('sounds')}/${file}`;
 }
 
 export default async function playSound(soundPath?: string) {
